@@ -1,15 +1,15 @@
-# 卒業発表から卒論へ｜Rashkia研究室版
+# 卒業発表から卒論へ｜Lashkia研究室版
 
-Rashkia（ラシキア）研究室の過去の卒論をもとに、卒業発表のPowerPoint（PPTX）から日本語のLaTeX原稿を作るスキルです。学内データベースのアカウントは不要です。
+Lashkia（ラシキア）研究室の過去の卒論をもとに、卒業発表のPowerPoint（PPTX）から日本語のLaTeX原稿を作るスキルです。学内データベースのアカウントは不要です。
 
 ## 導入
 
 | 利用環境 | 手順 |
 | --- | --- |
-| Claude | [スキルZIP](https://github.com/yama4936/rashkia-lab-thesis-skills/releases/latest/download/pptx-to-thesis.zip)を「Customize → Skills」でアップロードして有効化 |
-| Claude Code | 作業フォルダで `git clone https://github.com/yama4936/rashkia-lab-thesis-skills.git .claude/skills/pptx-to-thesis` |
-| Codex・Gemini CLI | 作業フォルダで `git clone https://github.com/yama4936/rashkia-lab-thesis-skills.git .agents/skills/pptx-to-thesis` |
-| その他のチャット | [チャット用指示書](https://github.com/yama4936/rashkia-lab-thesis-skills/releases/latest/download/pptx-to-thesis-chat.md)を発表資料と一緒に添付 |
+| Claude | [スキルZIP](https://github.com/yama4936/lashkia-lab-pptx-to-thesis-skills/releases/latest/download/pptx-to-thesis.zip)を「Customize → Skills」でアップロードして有効化 |
+| Claude Code | 作業フォルダで `git clone https://github.com/yama4936/lashkia-lab-pptx-to-thesis-skills.git .claude/skills/pptx-to-thesis` |
+| Codex・Gemini CLI | 作業フォルダで `git clone https://github.com/yama4936/lashkia-lab-pptx-to-thesis-skills.git .agents/skills/pptx-to-thesis` |
+| その他のチャット | [チャット用指示書](https://github.com/yama4936/lashkia-lab-pptx-to-thesis-skills/releases/latest/download/pptx-to-thesis-chat.md)を発表資料と一緒に添付 |
 
 ## 使い方
 

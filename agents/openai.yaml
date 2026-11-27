@@ -1,4 +1,4 @@
 interface:
-  display_name: "卒業発表から卒論へ｜Rashkia研究室版"
+  display_name: "卒業発表から卒論へ｜Lashkia研究室版"
   short_description: "卒業発表資料と公開文献から、質問を通じて日本語の卒論原稿を完成"
   default_prompt: "$pptx-to-thesis 添付した卒業発表PPTXから卒論原稿を作り、不足している情報を質問してください。"
