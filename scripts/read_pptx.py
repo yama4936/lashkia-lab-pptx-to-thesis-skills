@@ -95,6 +95,13 @@ def read_slide(package, part, number):
     if tree is not None:
         read_shapes(tree)
 
+    # A video can have a still poster image and a separate media relationship.
+    embedded_media = dict.fromkeys(
+        related_part(part, relation) for relation in relations.values()
+        if relation["Type"].rsplit("/", 1)[-1] in ("video", "audio", "media")
+        and relation.get("TargetMode") != "External"
+    )
+
     notes = []
     all_relations = list(relations.values())
     for relation in relations.values():
@@ -119,6 +126,7 @@ def read_slide(package, part, number):
         "blocks": blocks,
         "speaker_notes": notes,
         "external_hyperlinks": list(links),
+        "embedded_media": list(embedded_media),
         "visual_review": list(dict.fromkeys(visual)),
     }
 
