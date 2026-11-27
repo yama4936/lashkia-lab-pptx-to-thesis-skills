@@ -1,6 +1,6 @@
-# 卒業発表から卒論へ｜Rashkia研究室版
+# pptx to thesis｜Rashkia研究室版
 
-Rashkia（ラシキア）研究室の過去の卒論をもとに、卒業発表のPowerPoint（PPTX）から日本語のLaTeX原稿を作るスキルです。学内データベースのアカウントは不要です。
+Rashkia（ラシキア）研究室の過去の卒論をもとに、卒業発表のPowerPointから日本語のLaTeX原稿を作成するskills
 
 ## 導入
 
