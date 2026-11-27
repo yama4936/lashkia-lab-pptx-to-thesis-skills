@@ -111,6 +111,13 @@ def read_slide(package, part, number):
         else:
             embedded_media[related_part(part, relation)] = None
 
+    # Keep the actual picture parts available when a slide renderer drops a plot.
+    picture_parts = {}
+    for element in slide.iter():
+        relation = relations.get(element.get(f"{{{R}}}embed"))
+        if relation and relation["Type"].endswith("/image") and relation.get("TargetMode") != "External":
+            picture_parts[related_part(part, relation)] = None
+
     notes = []
     all_relations = list(relations.values())
     for relation in relations.values():
@@ -137,6 +144,7 @@ def read_slide(package, part, number):
         "external_hyperlinks": list(links),
         "embedded_media": list(embedded_media),
         "linked_media": [{"type": kind, "filename": name} for kind, name in linked_media],
+        "embedded_images": list(picture_parts),
         "visual_review": list(dict.fromkeys(visual)),
     }
 
