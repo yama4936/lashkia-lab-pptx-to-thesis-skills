@@ -14,10 +14,10 @@ $pptx-to-thesis 添付した卒業発表PPTXから卒論原稿を作ってくだ
 
 ## 別の作業フォルダ・環境に導入
 
-作業フォルダで次を実行し、Codexでそのフォルダを開きます。`/path/to/pptx-to-thesis.bundle` は、配布されたGitバンドルのパスに置き換えてください。共有先にGitリポジトリがある場合は、そのURLからもクローンできます。
+卒論の作業フォルダで次を実行し、Codexでそのフォルダを開きます。Gitバンドルから導入する場合は、URLをバンドルのファイルパスに置き換えてください。
 
 ```sh
-git clone /path/to/pptx-to-thesis.bundle .agents/skills/pptx-to-thesis
+git clone https://github.com/yama4936/pptx-to-thesis.git .agents/skills/pptx-to-thesis
 ```
 
 すべての作業フォルダで使いたい場合は、クローン先を `"$HOME/.agents/skills/pptx-to-thesis"` にします。[Codexのスキル配置ガイド](https://learn.chatgpt.com/docs/build-skills)
