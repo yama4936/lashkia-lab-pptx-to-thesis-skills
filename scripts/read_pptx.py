@@ -5,6 +5,7 @@ import json
 import posixpath
 import sys
 from pathlib import Path
+from urllib.parse import unquote
 from xml.etree import ElementTree as ET
 from zipfile import BadZipFile, ZipFile
 
@@ -96,11 +97,19 @@ def read_slide(package, part, number):
         read_shapes(tree)
 
     # A video can have a still poster image and a separate media relationship.
-    embedded_media = dict.fromkeys(
-        related_part(part, relation) for relation in relations.values()
-        if relation["Type"].rsplit("/", 1)[-1] in ("video", "audio", "media")
-        and relation.get("TargetMode") != "External"
-    )
+    embedded_media = {}
+    linked_media = {}
+    for relation in relations.values():
+        kind = relation["Type"].rsplit("/", 1)[-1]
+        if kind not in ("video", "audio", "media"):
+            continue
+        if relation.get("TargetMode") == "External":
+            # Only the filename is needed to request a missing clip.
+            path = relation["Target"].split("?", 1)[0].split("#", 1)[0]
+            filename = posixpath.basename(unquote(path).replace("\\", "/"))
+            linked_media[kind, filename] = None
+        else:
+            embedded_media[related_part(part, relation)] = None
 
     notes = []
     all_relations = list(relations.values())
@@ -127,6 +136,7 @@ def read_slide(package, part, number):
         "speaker_notes": notes,
         "external_hyperlinks": list(links),
         "embedded_media": list(embedded_media),
+        "linked_media": [{"type": kind, "filename": name} for kind, name in linked_media],
         "visual_review": list(dict.fromkeys(visual)),
     }
 
