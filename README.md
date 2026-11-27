@@ -1,6 +1,6 @@
 # pptx-to-thesis｜Lashkia研究室版
 
-Lashkia（ラシキア）研究室の過去の卒論をもとに、卒業発表のPowerPointから日本語のLaTeX原稿を作成するスキルです。 [正式版 v1.0.0](https://github.com/yama4936/lashkia-lab-pptx-to-thesis-skills/releases/tag/v1.0.0)
+ラシキア研究室の過去の卒論をもとに、卒業発表のPowerPointから日本語のLaTeX原稿を作成するskills [正式版 v1.0.0](https://github.com/yama4936/lashkia-lab-pptx-to-thesis-skills/releases/tag/v1.0.0)
 
 ## 導入
 
@@ -14,7 +14,3 @@ Lashkia（ラシキア）研究室の過去の卒論をもとに、卒業発表�
 ## 使い方
 
 PPTXを添付するか、作業フォルダ内のファイルを指定して依頼します。提出用テンプレートがあれば一緒に渡してください。
-
-> pptx-to-thesis で、この卒業発表を卒論にしてください。
-
-資料で確認できない研究条件や結果は、該当スライドを示し、利用中のチャットで質問します。回答を反映した編集用のLaTeX一式と、ビルドできた場合は確認用PDFを受け取れます。
