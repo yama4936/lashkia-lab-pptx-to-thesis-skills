@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+.env
+.env.*
+/outputs/
+/work/
+*.pptx
+*.pptm
+*.pdf
+*.docx
+*.bundle

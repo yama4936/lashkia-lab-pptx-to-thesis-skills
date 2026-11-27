@@ -1,0 +1,4 @@
+interface:
+  display_name: "卒業発表から卒論へ"
+  short_description: "CiiiiNiiiiiiiiを参照し、卒業発表資料を質問付きの卒論原稿に展開"
+  default_prompt: "$pptx-to-thesis 添付した卒業発表PPTXから卒論原稿を作り、不足している情報を質問してください。"
